@@ -1,5 +1,8 @@
 <head>
   <title>globuddy</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
   <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -8,17 +11,69 @@
 
   ga('create', 'UA-62361913-1', 'auto');
   ga('send', 'pageview');
-
-</script>
+  </script>
 </head>
 
 <body>
-  <h1>Welcome to Globuddy!</h1>
-
   {{> hello}}
+
 </body>
 
 <template name="hello">
-  <button>submit</button>
-  <p>To find out more about our travel offerings, click the button above. Our fans have clicked this button {{counter}} times.</p>
+	<div class="container">
+		<div class="jumbotron">
+			<h1>Globuddy</h1> 
+			<p>Bespoke immersive travel with locals</p> 
+		</div>
+		<div class="row">
+			<div class="col-md-4">
+				<h2>Viña del Mar</h2>
+				<p>
+					<img src="img/vina.JPG">
+				</p>
+				<p>
+					A cool port town in Chile.
+				</p>
+			</div>
+			<div class="col-md-4">
+				<h2>Santiago</h2>
+				<p>
+					<img src="img/santiago.jpg">
+				</p>
+				<p>
+					A bustling urban metropolis with great late night eats.
+				</p>
+			</div>
+			<div class="col-md-4">
+				<h2>El Calafate</h2>
+				<p>
+					<img src="img/elcalafate.jpg">
+				</p>
+				<p>
+					Remote southern Patagonia destination with huge ice cubes.
+				</p>
+			</div>
+		</div>
+	</div>
+	<p>
+		Globuddy is a platform that faciliates immersive travel experiences with local culturers. To find out more about our travel offerings, please register below. click the explore button. Our fans have clicked this button {{counter}} times.
+	</p>
+	<p>
+		{{> SignUp}}
+	</p>
+
+	<button>explore</button>
+
+	<iframe src="https://www.google.com/maps/d/embed?mid=zeD6lcdqjR94.krH-rodORhtA" width="640" height="480"></iframe>
 </template>
+
+<template name="SignUp">
+	<form action="/sign-up" id="signUpForm" method="post">
+		<input id="signUpEmail" name="email" placeholder="Email Address" type="text" >
+        <input id="signUpPassword" name="password" placeholder="Password" type="password">
+        <input id="signUpPasswordConfirm" name="password-confirm" placeholder="Confirm" type="password">
+        <input class="btn-submit" type="submit" value="Join Meteorites!">
+    </form>
+    <!-- end #sign-up-form -->
+</template>
+
