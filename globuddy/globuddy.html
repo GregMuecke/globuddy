@@ -16,7 +16,6 @@
 
 <body>
   {{> hello}}
-
 </body>
 
 <template name="hello">
@@ -58,12 +57,12 @@
 	<p>
 		Globuddy is a platform that faciliates immersive travel experiences with local culturers. To find out more about our travel offerings, please register below. click the explore button. Our fans have clicked this button {{counter}} times.
 	</p>
+	<button>explore</button>
 	<p>
 		{{> SignUp}}
 	</p>
 
-	<button>explore</button>
-
+	
 	<iframe src="https://www.google.com/maps/d/embed?mid=zeD6lcdqjR94.krH-rodORhtA" width="640" height="480"></iframe>
 </template>
 
@@ -72,7 +71,7 @@
 		<input id="signUpEmail" name="email" placeholder="Email Address" type="text" >
         <input id="signUpPassword" name="password" placeholder="Password" type="password">
         <input id="signUpPasswordConfirm" name="password-confirm" placeholder="Confirm" type="password">
-        <input class="btn-submit" type="submit" value="Join Meteorites!">
+        <input class="btn-submit" type="submit" value="Join Globuddy!">
     </form>
     <!-- end #sign-up-form -->
 </template>
