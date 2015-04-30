@@ -90,6 +90,13 @@
 	<p>
 		{{> SignUp}}
 	</p>
+	<p>
+		{{>SignIn}}
+	</p>
+	<p>
+		{{> SignOut}}
+	</p>
+
 
 	
 	<iframe src="https://www.google.com/maps/d/embed?mid=zeD6lcdqjR94.krH-rodORhtA" width="640" height="480"></iframe>
@@ -103,5 +110,25 @@
         <input class="btn-submit" type="submit" value="Join Globuddy!">
     </form>
     <!-- end #sign-up-form -->
+</template>
+
+<template name="SignIn">
+
+    <form action="/signin" id="signInForm" method="post">
+        <input id="signInEmail" type="text" name="email" placeholder="Email Address">
+        <input id="signInPassword" type="password" name="password" placeholder="Password">
+        <input class="btn-submit" type="submit" value="Sign In">
+    </form>
+    <!-- end #sign-in-form -->
+
+</template>
+
+<template name="SignOut">
+
+    <div class="connected">
+        <a class="sign-out" href="/" id="signOut">Sign Out</a>
+    </div>
+    <!-- end .connected -->
+
 </template>
 
